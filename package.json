@@ -47,7 +47,31 @@
     "url": "https://github.com/ml5js/ml5-library/issues"
   },
   "homepage": "https://github.com/ml5js/ml5-library#readme",
-  "devDependencies": {
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env"
+      ]
+    ],
+    "plugins": [
+      "@babel/plugin-transform-runtime",
+      "@babel/plugin-proposal-object-rest-spread"
+    ]
+  },
+  "peerDependencies": {
+    "@tensorflow/tfjs-converter": "^1.2.9",
+    "@tensorflow/tfjs-core": "^1.2.9"
+  },
+  "dependencies": {
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.9",
     "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
@@ -97,33 +121,7 @@
     "webpack": "4.1.1",
     "webpack-cli": "2.0.10",
     "webpack-dev-server": "3.10.3",
-    "webpack-merge": "^4.1.2"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    }
-  },
-  "files": [
-    "dist",
-    "README.md"
-  ],
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env"
-      ]
-    ],
-    "plugins": [
-      "@babel/plugin-transform-runtime",
-      "@babel/plugin-proposal-object-rest-spread"
-    ]
-  },
-  "peerDependencies": {
-    "@tensorflow/tfjs-converter": "^1.2.9",
-    "@tensorflow/tfjs-core": "^1.2.9"
-  },
-  "dependencies": {
+    "webpack-merge": "^4.1.2",
     "@magenta/sketch": "0.2.0",
     "@tensorflow-models/body-pix": "1.1.2",
     "@tensorflow-models/coco-ssd": "^2.0.0",
